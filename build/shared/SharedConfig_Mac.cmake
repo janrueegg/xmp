@@ -62,10 +62,10 @@ set(COMMON_PLATFORM_END_WHOLE_ARCHIVE "")
 set(COMMON_DYLIBEXTENSION	"dylib")
 
 
-find_program(GCCTOOL gcc HINTS "/usr/bin" "${OSX_DEVELOPER_ROOT}/usr/bin")
-if (${GCCTOOL} STREQUAL "GCCTOOL-NOTFOUND")
-	message(SEND_ERROR "Can't find gcc in ${OSX_DEVELOPER_ROOT}/usr/bin")
-endif()
+#find_program(GCCTOOL gcc HINTS "/usr/bin" "${OSX_DEVELOPER_ROOT}/usr/bin")
+#if (${GCCTOOL} STREQUAL "GCCTOOL-NOTFOUND")
+#	message(SEND_ERROR "Can't find gcc in ${OSX_DEVELOPER_ROOT}/usr/bin")
+#endif()
 
 SetupCompilerFlags()
 SetupGeneralDirectories()
