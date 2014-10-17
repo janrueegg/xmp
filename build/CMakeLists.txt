@@ -72,9 +72,9 @@ include(${CMAKE_CURRENT_SOURCE_DIR}/${XMP_THIS_PROJECT_RELATIVEPATH}/build/XMP_C
 # Sub projects
 # ==============================================================================
 add_subdirectory(${XMP_ROOT}/XMPCore/build ${XMP_ROOT}/XMPCore/build/${XMP_CMAKEFOLDER_NAME})
-if (NOT APPLE_IOS)
+#if (NOT APPLE_IOS)
 	add_subdirectory(${XMP_ROOT}/XMPFiles/build ${XMP_ROOT}/XMPFiles/build/${XMP_CMAKEFOLDER_NAME})
-endif()
+#endif()
 
 # ==============================================================================
 # configuration feedback
