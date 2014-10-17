@@ -15,6 +15,7 @@
 #include <CoreFoundation/CFDate.h>
 #include <CoreFoundation/CFNumber.h>
 #include <CoreFoundation/CFError.h>
+#include <CoreFoundation/CFURLAccess.h>
 #include <string>
 
 

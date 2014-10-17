@@ -14,9 +14,9 @@
 #if XMP_WinBuild
 #include <Windows.h>
 typedef HMODULE OS_ModuleRef;
-#elif XMP_MacBuild
+#elif defined(XMP_MacBuild) || defined(XMP_iOSBuild)
 #include <CoreFoundation/CFBundle.h>
-#include <tr1/memory>
+#include <memory>
 typedef CFBundleRef OS_ModuleRef;
 #elif XMP_UNIXBuild
 #include <tr1/memory>
