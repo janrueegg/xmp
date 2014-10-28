@@ -18,7 +18,11 @@
 
 #include "XMPFiles/source/FormatSupport/SWF_Support.hpp"
 
+#if XMP_iOSBuild
 #include "third-party/zlib/zlib.h"
+#else
+#include "zlib.h"
+#endif
 
 // =================================================================================================
 

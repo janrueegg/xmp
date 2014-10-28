@@ -18,7 +18,11 @@
 
 #include "XMPFiles/source/FileHandlers/UCF_Handler.hpp"
 
+#if XMP_iOSBuild
 #include "third-party/zlib/zlib.h"
+#else
+#include "zlib.h"
+#endif
 
 #include <time.h>
 

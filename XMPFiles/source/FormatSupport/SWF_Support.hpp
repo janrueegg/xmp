@@ -17,7 +17,11 @@
 
 #include "XMPFiles/source/XMPFiles_Impl.hpp"
 
+#if XMP_iOSBuild
 #include "third-party/zlib/zlib.h"
+#else
+#include "zlib.h"
+#endif
 
 // =================================================================================================
 
