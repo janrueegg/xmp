@@ -20,7 +20,7 @@ add_definitions(-DUNIX_ENV=1)
 # Linux -------------------------------------------
 
 set(COMMON_PLATFORM_LINK " ${${COMPONENT}_PLATFORM_LINK}")
-set(COMMON_SHARED_COMPILE_FLAGS "-fPIC  ${${COMPONENT}_SHARED_COMPILE_FLAGS} -fexceptions -Wformat -Wformat-security ")
+set(COMMON_SHARED_COMPILE_FLAGS "-fPIC  ${${COMPONENT}_SHARED_COMPILE_FLAGS} -fexceptions -Wformat -Wformat-security -fvisibility=hidden")
 set(COMMON_SHARED_COMPILE_DEBUG_FLAGS " ${${COMPONENT}_SHARED_COMPILE_DEBUG_FLAGS} -g -O0 -DDEBUG=1 -D_DEBUG=1")
 set(COMMON_SHARED_COMPILE_RELEASE_FLAGS "-Os ${${COMPONENT}_SHARED_COMPILE_RELEASE_FLAGS} -DNDEBUG=1 -D_NDEBUG=1")
 
