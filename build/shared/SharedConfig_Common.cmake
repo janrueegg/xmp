@@ -35,10 +35,10 @@ function(SetupCompilerFlags)
 		endif()
 	
 		# workaround for visibility problem and gcc 4.1.x
-		if(${${COMPONENT}_VERSIONING_GCC_VERSION} LESS 413)
-			# only remove inline hidden...
-			string(REGEX REPLACE "-fvisibility-inlines-hidden" "" CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS})
-		endif()
+                #if(${${COMPONENT}_VERSIONING_GCC_VERSION} LESS 413)
+                #	# only remove inline hidden...
+                #	string(REGEX REPLACE "-fvisibility-inlines-hidden" "" CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS})
+                #endif()
 	endif()
 	
 	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${${COMPONENT}_PREPROCESSOR_FLAGS}" PARENT_SCOPE)
