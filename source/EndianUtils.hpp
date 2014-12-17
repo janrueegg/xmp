@@ -22,6 +22,16 @@
 
 // =================================================================================================
 
+#ifdef ANDROID
+#include <machine/endian.h>
+   #if _BYTE_ORDER == _BIG_ENDIAN
+      #define kBigEndianHost 0
+   #else
+      #define kBigEndianHost 1
+      #define kLittleEndianHost 0
+   #endif
+#endif
+
 #define kLittleEndianHost (! kBigEndianHost)
 #if XMP_WinBuild
 	#pragma warning ( disable : 4127 )	// conditional expression is constant

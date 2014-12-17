@@ -12,7 +12,7 @@
 #include "source/ExpatAdapter.hpp"
 #include "XMPCore/source/XMPMeta.hpp"
 
-#if XMP_iOSBuild
+#if XMP_iOSBuild || defined(ANDROID)
 #include "third-party/expat/lib/expat.h"
 #else
 #include "expat.h"

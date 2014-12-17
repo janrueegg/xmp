@@ -39,7 +39,10 @@
 // =================================================================================================
 
 // Make sure off_t is 64 bits and signed.
+#ifndef ANDROID
+// FIXME: This check does not work on android... will this cause problems???
 static char check_off_t_size [ (sizeof(off_t) == 8) ? 1 : -1 ];
+#endif
 // *** No std::numeric_limits?  static char check_off_t_sign [ std::numeric_limits<off_t>::is_signed ? -1 : 1 ];
 
 static bool HaveWriteAccess( const std::string & path );

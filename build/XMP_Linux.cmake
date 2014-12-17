@@ -44,7 +44,9 @@ else()
 		set(XMP_EXTRA_LINK_FLAGS "-m64")
         set(XMP_PLATFORM_FOLDER "i80386linux_x64") # add XMP_BUILDMODE_DIR to follow what other platforms do
         set(XMP_GCC_LIBPATH /usr/lib64/gcc/x86_64-redhat-linux/4.4.4/)
-	else()
+        elseif(ANDROID)
+        set(XMP_PLATFORM_FOLDER "i80386linux") # add XMP_BUILDMODE_DIR to follow what other platforms do
+        else()
 		set(XMP_EXTRA_COMPILE_FLAGS "-m32 -mtune=i686")
 		set(XMP_EXTRA_LINK_FLAGS "-m32")
         set(XMP_PLATFORM_FOLDER "i80386linux") # add XMP_BUILDMODE_DIR to follow what other platforms do

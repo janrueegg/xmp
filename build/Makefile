@@ -62,6 +62,10 @@ ifeq ($(arch),64)
 	${MAKE} -C ./gcc/static/i80386linux_64/Release/ 
 endif
 
+StaticReleaseAndroid:
+	./cmake.command 32 Static android.toolchain.cmake Clean
+	${MAKE} -C ./gcc/static/i80386linux/Release/ 
+
 StaticDebug64:
 ifeq ($(arch),64)
 	./cmake.command 64 Static Debug ${toolchain} Clean
