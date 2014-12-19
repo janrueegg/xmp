@@ -25,10 +25,9 @@
 #ifdef ANDROID
 #include <machine/endian.h>
    #if _BYTE_ORDER == _BIG_ENDIAN
-      #define kBigEndianHost 0
-   #else
       #define kBigEndianHost 1
-      #define kLittleEndianHost 0
+   #else
+      #define kBigEndianHost 0
    #endif
 #endif
 
