@@ -18,7 +18,7 @@ cmake_minimum_required(VERSION 2.8.6)
 
 set(XMP_PLATFORM_SHORT "ios")
 	
-set(CMAKE_OSX_ARCHITECTURES "$(ARCHS_STANDARD_32_BIT)")
+#set(CMAKE_OSX_ARCHITECTURES "$(ARCHS_STANDARD_32_BIT)")
 
 add_definitions(-DIOS_ENV=1)
 
